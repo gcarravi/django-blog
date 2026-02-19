@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 # from django.http import HttpResponse
 from django.views import generic
 from .models import Post
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -27,8 +28,9 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    comment_form = CommentForm()
 
-    context = {"post": post, "coder": "Gemma Carravilla", "comments": comments, "comment_count": comment_count,}
+    context = {"post": post, "coder": "Gemma Carravilla", "comments": comments, "comment_count": comment_count, "comment_form": comment_form,}
 
     return render(request, "blog/post_detail.html",  context,)
 
