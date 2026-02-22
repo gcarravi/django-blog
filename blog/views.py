@@ -35,6 +35,7 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
