@@ -6,9 +6,9 @@
         <div class="col-4 text-center">
             <!-- <img src="{% static 'images/nobody.jpg' %}" width="75%"> -->
             {% if "placeholder" in about.profile_image.url %}
-            <img src="{% static 'images/nobody.jpg' %}" width="75%" class="scale" alt="placeholder image">
+            <img src="{% static 'images/nobody.jpg' %}" style="width:100%;" class="scale" alt="placeholder image">
             {% else %}
-            <img src="{{ about.profile_image.url }}" width="75%" class="scale" alt="{{ about.title }}">
+            <img src="{{ about.profile_image.url }}" style="width:100%;" class="scale" alt="{{ about.title }}">
             {% endif %}
         </div>
         <div class="col-8">
