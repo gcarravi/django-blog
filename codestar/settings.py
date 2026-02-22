@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-+%rwfb45a87gi21b#ytjvhen#x(x9afr$6m0)8tfaq6a-a3of$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 print("DEBUG:", DEBUG)
 
@@ -44,14 +44,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
     'crispy_bootstrap5',
-    'blog',
     'django_summernote',
+    'cloudinary',
+    'blog',
     'about',
 ]
 

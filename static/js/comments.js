@@ -20,8 +20,10 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     let commentId = e.target.getAttribute("comment_id");
+    console.log("commentId is " + commentId);
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
-    commentText.value = commentContent;
+    console.log("commentContent is " + commentContent);
+    commentText.value = commentContent;    // The comment content we want to edit is fetched (commentContent) and then placed into the comment form's input field
     submitButton.innerText = "Update";
     commentForm.setAttribute("action", `edit_comment/${commentId}`);
   });
