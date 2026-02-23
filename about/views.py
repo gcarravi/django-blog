@@ -33,9 +33,9 @@ def about_me(request):
     collaborate_form = CollaborateForm()
     
     # Borrar!
-    print(form.fields['name'].required)    # True
-    print(form.fields['email'].required)   # True
-    print(form.fields['message'].required) # True
+    # print(form.fields['name'].required)    # True
+    # print(form.fields['email'].required)   # True
+    # print(form.fields['message'].required) # True
     # Borrar!
 
     return render(
