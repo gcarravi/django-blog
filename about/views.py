@@ -31,6 +31,12 @@ def about_me(request):
 
     about = About.objects.all().order_by('-updated_on').first()
     collaborate_form = CollaborateForm()
+    
+    # Borrar!
+    print(form.fields['name'].required)    # True
+    print(form.fields['email'].required)   # True
+    print(form.fields['message'].required) # True
+    # Borrar!
 
     return render(
         request,
